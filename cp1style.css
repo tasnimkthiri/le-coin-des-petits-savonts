@@ -1,0 +1,285 @@
+/* Corps de la page */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Police de caractères pour le texte */
+    background-color: hwb(34 54% 2%); /* Couleur de fond */
+    margin: 20px 20px 20px 20px; /* Marges autour du corps de la page */
+    padding: 12px; /* Espacement interne autour du contenu */
+    min-height: 100vh; /* Assure que la hauteur minimale de la page couvre tout l'écran */
+    font-style: oblique; /* Applique un style de texte oblique */
+    flex-direction: column; /* Utilisé pour les mises en page flexibles */
+}
+
+/* Conteneur principal de la page */
+.container {
+    text-align: center; /* Aligne le texte au centre */
+    background-color: rgb(249, 249, 249); /* Couleur de fond claire */
+    padding: 20px; /* Espacement interne */
+    border-radius: 15px; /* Bordure arrondie */
+    box-shadow: 0 0 20px; /* Ombre portée autour du conteneur */
+    margin: 20px; /* Marges externes */
+}
+
+/* Titres principaux */
+h1 h2 {
+    font-size: 2.5em; /* Taille de la police du titre */
+    color: hwb(0 0% 100%); /* Couleur du texte */
+    margin-bottom: 30px; /* Marge inférieure */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Police de caractères élégante */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Conteneur de liens flexibles */
+.link-container {
+    display: flex; /* Utilise le modèle de boîte flexible */
+    flex-wrap: wrap; /* Permet aux éléments de se renvoyer à la ligne si nécessaire */
+    justify-content: space-evenly; /* Espace uniforme entre les éléments */
+    gap: 20px; /* Espace entre les éléments */
+}
+
+/* Style pour les éléments de lien */
+.lien {
+    width: 180px; /* Largeur fixe des éléments */
+    text-align: center; /* Centrer le texte dans l'élément */
+    background-color: #fff; /* Fond blanc */
+    border-radius: 20px; /* Bordure arrondie */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+    overflow: hidden; /* Empêche le contenu de déborder */
+}
+
+/* Lien à l'intérieur de l'élément */
+.lien a {
+    display: block; /* Fait du lien un bloc pour occuper toute la largeur */
+    text-decoration: none; /* Enlève la décoration par défaut du lien */
+    color: hsl(0, 3%, 7%); /* Couleur du texte du lien */
+    font-size: 1.1em; /* Taille de la police du lien */
+    padding: 10px 0; /* Espacement interne du lien */
+    background-color: #ffcb6b; /* Fond jaune clair */
+    border-bottom: 2px solid #ffd11a; /* Bordure inférieure jaune */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+}
+
+/* Image à l'intérieur du lien */
+.lien img {
+    width: 100%; /* Largeur de l'image égale à la largeur du conteneur */
+    height: auto; /* Hauteur automatique pour maintenir le ratio */
+    object-fit: cover; /* Recadre l'image pour couvrir l'espace disponible */
+    border-bottom: 2px solid #ffd11a; /* Bordure jaune sous l'image */
+    transition: transform 0.3s ease; /* Transition douce lors du changement de style */
+}
+
+/* Effet au survol de l'image */
+.lien img:hover {
+    transform: scale(1.1); /* Agrandissement de l'image lors du survol */
+}
+
+/* Changement de couleur du lien au survol */
+.lien a:hover {
+    background-color: #ffae42; /* Couleur de fond plus foncée */
+}
+
+/* Style pour les images de la page */
+#imga {
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+/* Style pour les étiquettes de formulaire */
+label {
+    margin-bottom: 10px; /* Marge inférieure de l'étiquette */
+    font-weight: bolder; /* Police en gras */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+}
+
+/* Style pour les éléments de liste */
+ul li:nth-child(odd) {
+    background-color: var(--secondary-color); /* Couleur de fond alternée */
+}
+
+/* Animation de fondu pour les éléments */
+@keyframes fadeIn { 
+    from {
+        opacity: 0; /* Commence avec une opacité de 0 */
+    }
+    to {
+        opacity: 1; /* Se termine avec une opacité de 1 */
+    }
+}
+
+div {
+    animation: fadeIn 1s ease-in-out; /* Applique l'animation de fondu */
+}
+
+/* Styles spécifiques au formulaire */
+.formulaire {
+    display: flex; /* Utilise un modèle de boîte flexible */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    width: 100%; /* Utilise toute la largeur du conteneur */
+    box-sizing: border-box; /* Inclut les marges et les bordures dans la largeur totale */
+    margin: 30px; /* Marge autour du formulaire */
+    padding: 12px; /* Espacement interne */
+}
+
+/* Champs de saisie et sélecteurs */
+input.form-control, select.form-control {
+    margin-bottom: 30px; /* Marge inférieure */
+    padding: 10px; /* Espacement interne */
+    border: 2px solid hsl(0, 0%, 0%); /* Bordure noire */
+    border-radius: 5px; /* Bordure arrondie */
+    width: 95%; /* Largeur du champ */
+}
+
+/* Style lors de la mise au point (focus) sur les champs */
+input.form-control:focus, select.form-control:focus {
+    outline: none; /* Enlève la bordure de mise au point par défaut */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Ombre bleue lors du focus */
+}
+
+/* Style pour les petits écrans (tablettes et mobiles) */
+@media (max-width: 768px) {
+    div {
+        width: 90%; /* Largeur réduite sur les petits écrans */
+    }
+}
+
+/* Titre principal */
+h1 {
+    text-align: center; /* Centrer le titre */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Police élégante */
+    text-decoration: dotted; /* Sous-lignage pointillé */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+}
+
+/* Conteneur de formulaire avec fond spécifique */
+.form-container {
+    background-color: #FFFACD; /* Jaune crème pour le fond */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Bordure arrondie */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: auto; /* Centrer le conteneur */
+}
+
+/* Style des paragraphes */
+p {
+    text-align: center; /* Centrer le texte */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Police élégante */
+    font-size: medium; /* Taille de la police */
+    text-transform: none; /* Aucune transformation du texte */
+}
+
+/* Validation des champs de formulaire */
+input:invalid {
+    border: 2px dashed hsl(60, 14%, 1%); /* Bordure en pointillé pour un champ invalide */
+}
+input:valid {
+    border: 1px solid #f7a634; /* Bordure valide */
+}
+
+/* Style des boutons */
+button[type="submit"] {
+    display: block; /* Fait du bouton un bloc */
+    width: 100%; /* Largeur du bouton */
+    background: #ffae42; /* Fond orange */
+    color: white; /* Couleur du texte */
+    border: none; /* Enlève la bordure */
+    border-radius: 4px; /* Bordure arrondie */
+    cursor: pointer; /* Change le curseur en main */
+    font-size: 16px; /* Taille de la police */
+    padding: 10px 20px; /* Espacement interne */
+}
+
+button[type="submit"]:hover {
+    background: #ffae42; /* Changement de couleur au survol */
+}
+
+button[type="reset"] {
+    display: block; /* Fait du bouton un bloc */
+    width: 100%; /* Largeur du bouton */
+    padding: 10px; /* Espacement interne */
+    background: #ffae42; /* Fond orange */
+    color: white; /* Couleur du texte */
+    border: none; /* Enlève la bordure */
+    border-radius: 4px; /* Bordure arrondie */
+    cursor: pointer; /* Change le curseur en main */
+    font-size: 16px; /* Taille de la police */
+}
+
+/* Style du bouton reset au survol */
+button[type="reset"]:hover {
+    background: #ffae42; /* Couleur de fond au survol */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none; /* Enlève la liste à puces */
+    padding: 0; /* Enlève le padding */
+    margin: 0; /* Enlève la marge */
+    display: flex; /* Utilise un modèle de boîte flexible */
+    justify-content: center; /* Centre les éléments */
+    align-items: center; /* Aligne les éléments verticalement */
+}
+
+nav ul li {
+    margin: 0 1rem; /* Espace entre les éléments */
+}
+
+nav ul li a {
+    text-decoration: none; /* Enlève la décoration du lien */
+    color: #000; /* Couleur du texte en noir */
+    font-style: italic; /* Style de police italique */
+    font-weight: bold; /* Police en gras */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Souligne le lien au survol */
+}
+
+/* Style du bouton dans le formulaire */
+.formulaire .btn {
+    margin-top: 10px; /* Marge supérieure */
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #ffae42; /* Fond orange */
+    color: white; /* Couleur du texte */
+    border: none; /* Enlève la bordure */
+    cursor: pointer; /* Change le curseur en main */
+}
+
+/* Effet de survol pour le bouton */
+.formulaire .btn:hover {
+    background-color: #ffae42; /* Changement de couleur au survol */
+}
+
+/* Style du champ de recherche */
+input[type="search"], select {
+    margin: 10px 0; /* Marge */
+    padding: 10px; /* Espacement interne */
+    width: calc(100% - 22px); /* Largeur calculée */
+}
+
+input[type="radio"] {
+    margin: 5px; /* Marge autour du bouton radio */
+}
+
+label {
+    display: block; /* Affiche le label en bloc */
+    margin-top: 10px; /* Marge supérieure */
+    margin-right: 10px; /* Marge droite */
+}
+
+/* Style spécifique au champ de message */
+#message {
+    width: 90%;/* Prend toute la largeur disponible */
+    height: 150px; /* Hauteur fixe */
+    padding: 10px; /* Espacement interne */
+    border: 2px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Bordure arrondie */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    font-size: 16px; /* Taille de la police */
+    resize: vertical; /* Permet de redimensionner verticalement */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Style au focus sur le champ de message */
+#message:focus {
+    border-color: #0056b3; /* Bordure bleue au focus */
+    box-shadow: 0px 0px 5px rgba(0, 86, 179, 0.5); /* Ombre au focus */
+    outline: none; /* Retirer le contour par défaut */
+}

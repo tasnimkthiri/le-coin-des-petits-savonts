@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées pour le référencement et l'encodage -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Site web interactif gratuit pour aider les enfants à apprendre">
+    <meta name="keywords" content="HTML, CSS, JavaScript, enfants, apprentissage">
+    <meta name="author" content="Tasnim Kthiri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Lien vers la feuille de style externe -->
+    <link rel="stylesheet" href="cp1style.css">
+    
+    <title>Le Coin des Petits Savants - Inscription</title>
+</head>
+<body>
+    <!-- Début du formulaire d'inscription -->
+    <fieldset>
+        <!-- Titre du formulaire -->
+        <legend>Vos coordonnées</legend>
+        <h1>Connexion</h1>
+
+        <!-- Conteneur principal du formulaire -->
+        <div class="container" id="formulaire">
+            <form method="post">
+                <!-- Champ pour le nom -->
+                <label for="nom">Nom:</label>
+                <input class="form-control" type="text" id="nom" name="nom" placeholder="Votre nom" required aria-required="true"><br>
+                <!-- Commentaire : aria-required="true" améliore l'accessibilité en indiquant que ce champ est obligatoire pour les utilisateurs de lecteurs d'écran. -->
+
+                <!-- Champ pour le prénom -->
+                <label for="prénom">Prénom:</label>
+                <input class="form-control" type="text" id="prénom" name="prénom" placeholder="Votre prénom" required aria-required="true"><br>
+
+                <!-- Champ pour l'email -->
+                <label for="email">Email:</label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="Votre email" required aria-required="true"><br>
+                <!-- Commentaire : type="email" permet une validation automatique de l'email, améliorant l'expérience utilisateur. -->
+
+                <!-- Champ pour la date de naissance -->
+                <label for="date">Date de naissance:</label>
+                <input class="form-control" type="date" id="date" name="date" required aria-required="true"><br>
+                <!-- Commentaire : type="date" permet d'afficher un sélecteur de date natif dans les navigateurs compatibles. -->
+
+                <!-- Champ pour le numéro de téléphone -->
+                <label for="tel">Numéro de téléphone:</label>
+                <input class="form-control" type="tel" id="tel" name="tel" placeholder="Votre téléphone" aria-required="true"><br>
+                <!-- Commentaire : Le pattern vérifie que le numéro contient exactement 10 chiffres (ajustez selon votre pays). -->
+
+                <!-- Champ pour le mot de passe avec un pattern de validation -->
+                <label for="password">Mot de passe:</label>
+                <input class="form-control" type="password" id="password" name="password" placeholder="Votre mot de passe" pattern="[a-zA-Z0-9]{6,}" required aria-required="true" title="Le mot de passe doit contenir au moins 6 caractères, avec des lettres et des chiffres."><br>
+                <!-- Commentaire : L'attribut title fournit une description du pattern de validation, améliorant l'expérience utilisateur. -->
+
+                <!-- Sélection du rôle (Parent, Enseignant, Élève) -->
+                <h3>Rôle</h3>
+                <input type="radio" name="role" value="parent" id="parent" required>
+                <label for="parent">Parent</label><br>
+                <input type="radio" name="role" value="enseignant" id="enseignant" required>
+                <label for="enseignant">Enseignant</label><br>
+                <input type="radio" name="role" value="élève" id="élève" required>
+                <label for="élève">Élève</label><br>
+                <!-- Commentaire : Les boutons radio permettent à l'utilisateur de choisir une seule option parmi les trois proposées. -->
+
+                <!-- Sélection du niveau d'études -->
+                <h3><label for="niveau">Niveau:</label></h3>
+                <select class="form-select" id="niveau" name="niveau" required aria-required="true">
+                    <!-- Option par défaut qui guide l'utilisateur -->
+                    <option value="" selected>Sélectionner un niveau</option>
+                    <option value="1">1ère année primaire</option>
+                    <option value="2">2ème année primaire</option>
+                    <option value="3">3ème année primaire</option>
+                    <option value="4">4ème année primaire</option>
+                    <option value="5">5ème année primaire</option>
+                    <option value="6">6ème année primaire</option>
+                    <option value="7">Autre</option>
+                </select><br>
+
+                <!-- Boutons de soumission et de réinitialisation -->
+                <button type="submit">Envoyer</button>
+                <button type="reset">Annuler</button>
+            </form>
+        </div>
+    </fieldset>
+
+    <!-- Section footer pour ajouter des informations supplémentaires -->
+    <footer>
+        <p>&copy; 2024 [Tasnim Kthiri]. Tous droits réservés.</p>
+        <!-- Commentaire : Le footer contient des informations de copyright. -->
+    </footer>
+    <script>// Sélectionner le bouton de soumission et le formulaire
+        const submitButton = document.querySelector('button[type="submit"]');
+        const resetButton = document.querySelector('button[type="reset"]');
+        
+        // Ajouter un événement de soumission du formulaire
+        submitButton.addEventListener('click', function(event) {
+            // Empêcher l'envoi réel du formulaire pour éviter un rafraîchissement de la page
+            event.preventDefault();
+            
+            // Afficher un message de confirmation (facultatif)
+            alert("Formulaire soumis avec succès!");
+        
+            // Réinitialiser tous les champs du formulaire
+            const formulaire = document.querySelector('form');
+            formulaire.reset();
+        });
+        
+        // Optionnel : Réinitialiser le formulaire quand on clique sur le bouton "reset"
+        resetButton.addEventListener('click', function() {
+            const formulaire = document.querySelector('form');
+            formulaire.reset();
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="cp1style.css">
+    <title>Contact</title>
+    
+    <!-- Meta tags for page SEO and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Contactez-nous pour toute question ou assistance.">
+    <meta name="keywords" content="contact, assistance, support, enfants, apprentissage">
+    <meta name="author" content="Tasnim Kthiri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Fieldset used to group the form elements together, with a legend -->
+    <fieldset>
+        <legend>Contactez-nous</legend>
+        <h1>Formulaire de Contact</h1>
+        
+        <!-- Container for the contact form -->
+        <div class="container" id="formulaire">
+            <!-- Form element with POST method (it should be linked to a backend for submission) -->
+            <form method="post" action="#">
+                <!-- Label and input field for the user's name -->
+                <label for="nom">Nom:</label>
+                <input class="form-control" type="text" id="nom" name="nom" placeholder="Nom" required><br>
+
+                <!-- Label and input field for the user's email -->
+                <label for="email">Email:</label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="Email" required><br>
+
+                <!-- Label and input field for the subject of the message -->
+                <label for="sujet">Sujet:</label>
+                <input class="form-control" type="text" id="sujet" name="sujet" placeholder="Sujet" required><br>
+
+                <!-- Label and textarea for the user's message -->
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" placeholder="Votre message" rows="5" required></textarea><br>
+
+                <!-- Submit and reset buttons -->
+                <button type="submit">Envoyer</button>
+                <button type="reset">Annuler</button>
+            </form>
+        </div>
+    </fieldset>
+    <script>// Sélectionner le bouton de soumission et le formulaire
+        const submitButton = document.querySelector('button[type="submit"]');
+        const resetButton = document.querySelector('button[type="reset"]');
+        
+        // Ajouter un événement de soumission du formulaire
+        submitButton.addEventListener('click', function(event) {
+            // Empêcher l'envoi réel du formulaire pour éviter un rafraîchissement de la page
+            event.preventDefault();
+            
+            // Afficher un message de confirmation (facultatif)
+            alert("Formulaire soumis avec succès!");
+        
+            // Réinitialiser tous les champs du formulaire
+            const formulaire = document.querySelector('form');
+            formulaire.reset();
+        });
+        
+        // Optionnel : Réinitialiser le formulaire quand on clique sur le bouton "reset"
+        resetButton.addEventListener('click', function() {
+            const formulaire = document.querySelector('form');
+            formulaire.reset();
+        });
+        </script>
+</body>
+</html>

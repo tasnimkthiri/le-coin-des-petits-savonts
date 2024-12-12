@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lire et écrire avec plaisir</title>
+    <link rel="stylesheet" href="cp1style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lire et écrire avec plaisir</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#exercices">Activités</a></li>
+            <li><a href="#exfrancais">Exercice Français</a></li>
+            <li><a href="#exanglais">Exercice Anglais</a></li>
+            <li><a href="#exarabe">تمارين لغة عربية</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="container" id="introduction">
+            <h2>Bienvenue</h2>
+            <p>Bienvenue sur notre page dédiée à l'apprentissage de la lecture et de l'écriture.</p>
+            <label for="search">Recherche:</label>
+            <input class="form-control" type="search" id="search" name="search" placeholder="Recherche"><br>
+        </section>
+
+        <section id="exercices">
+            <h2>Exercices</h2>
+
+            <!-- Exercices en français -->
+
+            <div class="container" id="exfrancais">
+                <h3>Français</h3>
+                <div class="exercise">
+                    <p>Exercice de lecture :<br> Lis le texte suivant et réponds aux questions.</p>
+                    <p>"Le chat joue avec la balle. Il saute partout dans la maison."</p>
+                    <ul>
+                        <li>Que fait le chat ?</li>
+                        <div class="formulaire">
+                            <label for="message1">Répondre:</label>
+                            <textarea id="message1" name="message1"></textarea>
+                            <button type="submit" class="btn">envoyer</button>
+                        </div>
+                        <li>Où joue-t-il ?</li>
+                        <div class="formulaire">
+                            <label for="message2">Répondre:</label>
+                            <textarea id="message2" name="message2"></textarea>
+                            <button type="submit" class="btn">envoyer</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h3>Exercice d'écriture : Complète les phrases suivantes avec les mots appropriés.</h3>
+                    <p>Le __ joue avec une __. Elle est __.</p>
+                    <ul>
+                        <li>chat, balle, rouge</li>
+                        <li>chien, balle, bleue</li>
+                        <div class="formulaire">
+                            <label for="message3">Répondre:</label>
+                            <textarea id="message3" name="message3"></textarea>
+                            <button type="submit" class="btn">envoyer</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h3>Exercice de vocabulaire :<br> Trouve les synonymes des mots suivants.</h3>
+                    <p>Grand, Petit, Rapide</p>
+                    <ul>
+                        <li>Énorme, Minuscule, Vite</li>
+                    </ul>
+                    <div class="formulaire">
+                        <label for="message4">Répondre:</label>
+                        <textarea id="message4" name="message4"></textarea>
+                        <button type="submit" class="btn">envoyer</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3>Exercice: Couleur</h3>
+                    <p>Associez chaque couleur à l'objet correct?</p>
+                    <ul>
+                        <li>Le ciel est</li>
+                        <div class="formulaire">
+                            <input type="radio" name="choisir" value="bleu" id="bleu" required>
+                            <label for="bleu">bleu</label><br>
+                            <input type="radio" name="choisir" value="rouge" id="rouge" required>
+                            <label for="rouge">rouge</label><br>
+                            <input type="radio" name="choisir" value="vert" id="vert" required>
+                            <label for="vert">vert</label><br>
+                        </div>
+                        <li>La pomme est</li>
+                        <div class="formulaire">
+                            <select id="color2" name="color2">
+                                <option value="1">rose</option>
+                                <option value="2">rouge</option>
+                                <option value="3">noire</option>
+                            </select>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h3>Exercice: Les chiffres</h3>
+                    <ul>
+                        <li>Écrivez les chiffres en lettres:</li>
+                        <div class="formulaire">
+                            <li>1 -</li>
+                            <label for="message5">Répondre:</label>
+                            <textarea id="message5" name="message5"></textarea>
+                            <button type="submit" class="btn">envoyer</button>
+                            <li>5 -</li>
+                            <label for="message6">Répondre:</label>
+                            <textarea id="message6" name="message6"></textarea>
+                            <button type="submit" class="btn">envoyer</button>
+                            <li>158 -</li>
+                            <label for="message7">Répondre:</label>
+                            <textarea id="message7" name="message7"></textarea>
+                            <button type="submit" class="btn">envoyer</button>
+                            <li>694 -</li>
+                            <label for="message8">Répondre:</label>
+                            <textarea id="message8" name="message8"></textarea>
+                            <button type="submit" class="btn">envoyer</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h3>Exercice: Les jours de la semaine</h3>
+                    <p>Mettez les jours de la semaine dans l'ordre:</p>
+                    <ul>
+                        <li>Jeudi<br>Lundi<br>Dimanche<br>Mercredi<br>Samedi<br>Mardi<br>Vendredi</li>
+                    </ul>
+                    <div class="formulaire">
+                        <label for="message10">Répondre:</label>
+                        <textarea id="message10" name="message10"></textarea>
+                        <button type="submit" class="btn">envoyer</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercices en anglais -->
+
+            <div class="container" id="exanglais">
+                <h3>Anglais</h3>
+                <div class="exercise">
+                    <h3>Reading Exercise: Read the following text and answer the questions.</h3>
+                    <p>"The cat is playing with the ball. It is jumping all around the house."</p>
+                    <ul>
+                        <li>What is the cat doing?</li>
+                        <li>Where is it playing?</li>
+                        <div class="formulaire">
+                            <label for="message10">Répondre:</label>
+                            <textarea id="message10" name="message10"></textarea>
+                            <button type="submit" class="btn">envoyer</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h3>Writing Exercise:<br>Complete the sentences with the correct words.</h3>
+                    <p>The __ is playing with a __. It is __.</p>
+                    <ul>
+                        <li>cat, ball, red</li>
+                        <li>dog, ball, blue</li>
+                    </ul>
+                    <div class="formulaire">
+                        <label for="message11">Répondre:</label>
+                        <textarea id="message11" name="message11"></textarea>
+                        <button type="submit" class="btn">envoyer</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3>Vocabulary Exercise: Find the synonyms for the following words.</h3>
+                    <p>Big, Small, Fast</p>
+                    <div class="formulaire">
+                        <label for="message12">Répondre:</label>
+                        <textarea id="message12" name="message12"required></textarea>
+                        <button type="submit" class="btn">envoyer</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercices en arabe -->
+
+            <div class="container" id="exarabe">
+                <h3>تمارين لغة عربية</h3>
+                <div class="exercise">
+                    <h3>تمرين القراءة: اقرأ النص التالي وأجب عن الأسئلة.</h3>
+                    <p>"القطة تلعب بالكرة. إنها تقفز في جميع أنحاء المنزل."</p>
+                    <ul>
+                        <li>ماذا تفعل القطة؟</li>
+                        <div class="formulaire">
+                            <label for="message13">أجب:</label>
+                            <textarea id="message13" name="message13"required></textarea>
+                            <button type="submit" class="btn">إرسال</button>
+                        </div>
+                        <li>أين تلعب؟</li>
+                        <div class="formulaire">
+                            <label for="message14">أجب:</label>
+                            <textarea id="message14" name="message14"required></textarea>
+                            <button type="submit" class="btn">إرسال</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h3>تمرين الكتابة: أكمل الجمل بالكلمات الصحيحة.</h3>
+                    <p>القطة __ بالكرة. إنها __.</p>
+                    <ul>
+                        <li>تلعب, تقفز</li>
+                        <div class="formulaire">
+                            <label for="message15">أجب:</label>
+                            <textarea id="message15" name="message15"required></textarea>
+                            <button type="submit" class="btn">إرسال</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h3>تمرين القراءة: اقرأ النص التالي وأجب عن الأسئلة.</h3>
+                    <p>"الببغاء يردد الكلمات. إنه طائر ذكي."</p>
+                    <ul>
+                        <li>ماذا يفعل الببغاء؟</li>
+                        <div class="formulaire">
+                            <label for="message16">أجب:</label>
+                            <textarea id="message16" name="message16"required></textarea>
+                            <button type="submit" class="btn">إرسال</button>
+                        </div>
+                        <li>كيف توصف الببغاء؟</li>
+                        <div class="formulaire">
+                            <label for="message17">أجب:</label>
+                            <textarea id="message17" name="message17"required></textarea>
+                            <button type="submit" class="btn">إرسال</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="exercise">
+                    <h3>تمرين الكتابة: أكمل الجمل بالكلمات الصحيحة.</h3>
+                    <p>الببغاء __ الكلمات. إنه طائر __.</p>
+                    <ul>
+                        <li>يردد, ذكي</li>
+                        <div class="formulaire">
+                            <label for="message18">أجب:</label>
+                            <textarea id="message18" name="message18"required></textarea>
+                            <button type="submit" class="btn">إرسال</button>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Script pour la recherche dans la page
+        const searchInput = document.getElementById('search');
+        searchInput.addEventListener('input', function () {
+            const query = searchInput.value.toLowerCase();
+            const exercises = document.querySelectorAll('.exercise');
+            exercises.forEach(function (exercise) {
+                const title = exercise.querySelector('p');
+                if (title && title.textContent.toLowerCase().includes(query)) {
+                    exercise.style.display = 'block';
+                } else {
+                    exercise.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
